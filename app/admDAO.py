@@ -196,13 +196,14 @@ def verificar_administrador(email, senha):
 
         if administrador:
             # O administrador existe no sistema
-            return True
+            return administrador.id  # Retorna o ID do administrador
         else:
             # O administrador não existe no sistema
-            return False
+            return None
     except Exception as e:
         # Ocorreu um erro durante a verificação do administrador
         return False
+
     
 #email = 'admin@example.com'
 #senha = 'senha123'
